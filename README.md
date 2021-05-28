@@ -1,9 +1,5 @@
 # ArtSpot
 
-### Prerequisites
-
-Pour installer l'application il est nécessaire d'avoir les outils suivants
-
 ### Installation
 
 Pour avoir une version de développement fonctionnelle, vous devez suivre les étapes suivantes:
