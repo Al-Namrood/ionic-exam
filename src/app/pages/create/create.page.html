@@ -1,15 +1,14 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>ArtSpot</ion-title>
+    <ion-title>Ajouter une oeuvre</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="Form">
   <form [formGroup]="placeForm" (ngSubmit)="save()">
-    
     <ion-item>
       <ion-label position="floating">Nom</ion-label>
       <ion-input formControlName="name"></ion-input>
@@ -54,6 +53,6 @@
       Vous devez saisir une URL d'image valide
     </div>
 
-    <ion-button type="submit" expand="full">Enregistrer</ion-button>
+    <ion-button type="submit">Enregistrer</ion-button>
   </form>
 </ion-content>

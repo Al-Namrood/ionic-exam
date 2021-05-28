@@ -15,6 +15,7 @@
       <img [src]="place.image" [alt]="place.name" />
       <ion-card-header>
         <ion-card-title>{{ place.name }}</ion-card-title>
+        <ion-text>Note: {{place.note}}/5</ion-text>
       </ion-card-header>
 
       <ion-item>
@@ -22,9 +23,9 @@
           Ajouté le : {{ place.createdAt|date:"dd MMMM yyyy" }}
         </ion-label>
       </ion-item>
-      <ion-button expand="block" (click)="delete()"> UPDATE </ion-button>
+
       <ion-button color="danger" expand="block" (click)="delete()">
-        DELETE
+        SUPPRIMER
       </ion-button>
     </ion-card>
   </div>
