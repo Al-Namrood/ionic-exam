@@ -30,6 +30,6 @@ npm dev
 ```
 
 
-## Authors
+## Auteur
 
 - **Benjamin PLESANT** - _Développeur_ - [Lien Linkedin](https://www.linkedin.com/in/benjamin-plesant-72439515b/)
