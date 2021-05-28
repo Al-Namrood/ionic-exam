@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/list">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title *ngIf="place">{{ place.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-card *ngIf="place">
+      <img [src]="place.image" [alt]="place.name" />
+      <ion-card-header>
+        <ion-card-title>{{ place.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-label>
+          Ajouté le : {{ place.createdAt|date:"dd MMMM yyyy" }}
+        </ion-label>
+      </ion-item>
+      <ion-button expand="block" (click)="delete()"> UPDATE </ion-button>
+      <ion-button color="danger" expand="block" (click)="delete()">
+        DELETE
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

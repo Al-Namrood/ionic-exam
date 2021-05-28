@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>List des oeuvres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card *ngFor="let place of places" [routerLink]="'/detail/' + place.id">
+      <img [src]="place.image" alt="place.name" />
+      <ion-card-header>
+        <ion-card-title>{{place.name}}</ion-card-title>
+        <ion-text>Note: {{place.note}}/5</ion-text>
+      </ion-card-header>
+    </ion-card>
+  </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="primary" routerLink="/create">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

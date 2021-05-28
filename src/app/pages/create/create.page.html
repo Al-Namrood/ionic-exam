@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ArtSpot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="placeForm" (ngSubmit)="save()">
+    
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <div
+      class="form-error"
+      *ngIf="getForm().name.invalid && (getForm().name.dirty )"
+    >
+      Vous devez saisir un nom d'au moins 3 caractères
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Image</ion-label>
+      <ion-input formControlName="image"></ion-input>
+    </ion-item>
+    <div
+      class="form-error"
+      *ngIf="getForm().image.invalid && (getForm().image.dirty)"
+    >
+      Vous devez saisir une URL d'image valide
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input formControlName="location"></ion-input>
+    </ion-item>
+    <div
+      class="form-error"
+      *ngIf="getForm().location.invalid && (getForm().location.dirty)"
+    >
+      Vous devez saisir une URL d'image valide
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Note</ion-label>
+      <ion-input formControlName="note"></ion-input>
+    </ion-item>
+    <div
+      class="form-error"
+      *ngIf="getForm().note.invalid && (getForm().note.dirty)"
+    >
+      Vous devez saisir une URL d'image valide
+    </div>
+
+    <ion-button type="submit" expand="full">Enregistrer</ion-button>
+  </form>
+</ion-content>
